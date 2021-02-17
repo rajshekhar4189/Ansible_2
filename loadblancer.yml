@@ -1,0 +1,15 @@
+@@ -0,0 +1,14 @@
+- name: "install HAPROXY"
+  package:
+     name: "haproxy"
+     state: present
+- name: "copy HAPROXY configuration files to LoadBalancer"
+  template:
+     src: "haproxy.cfg"
+     dest: /etc/haproxy/
+  notify: lb restart
+- name: "restart HAPROXY"
+  service:
+     name: "haproxy"
+
+     state: "started"

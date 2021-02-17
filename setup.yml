@@ -1,0 +1,11 @@
+@@ -0,0 +1,10 @@
+- hosts: web
+  roles:
+  - role: webserver
+
+
+
+- hosts: LoadBalancer
+
+  roles:
+  - role: lbserver
